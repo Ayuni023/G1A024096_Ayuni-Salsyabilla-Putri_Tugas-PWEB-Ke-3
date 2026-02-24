@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sliding Puzzle</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="title">SLIDE<span class="accent">.</span></h1>
+      <p class="subtitle">Arrange the tiles in order</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-label">TIME</span>
+        <span class="stat-value" id="timer">0s</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-label">MOVES</span>
+        <span class="stat-value" id="moves">0</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-label">SIZE</span>
+        <span class="stat-value" id="size-display">3×3</span>
+      </div>
+    </div>
+
+    <div class="board-wrapper">
+      <div class="board" id="board"></div>
+      <div class="win-overlay" id="win-overlay">
+        <div class="win-content">
+          <div class="win-icon">✓</div>
+          <p class="win-label">SOLVED</p>
+          <p class="win-stats" id="win-stats"></p>
+          <button class="btn-play-again" id="btn-play-again">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-ghost" id="btn-reset">Reset</button>
+      <button class="btn btn-ghost" id="btn-shuffle">Shuffle</button>
+      <button class="btn btn-primary" id="btn-solve">Solve</button>
+    </div>
+
+    <div class="size-selector">
+      <button class="size-btn active" data-size="3">3×3</button>
+      <button class="size-btn" data-size="4">4×4</button>
+      <button class="size-btn" data-size="5">5×5</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
